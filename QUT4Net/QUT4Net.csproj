@@ -9,6 +9,7 @@
     <RepositoryUrl>https://github.com/ShimmyMySherbet/QUT4Net</RepositoryUrl>
     <PackageTags>QUT Queensland University of Technology WebScraper</PackageTags>
     <PackageLicenseExpression>Apache-2.0+</PackageLicenseExpression>
+    <PackageId>ShimmyMySherbet.QUT4Net</PackageId>
   </PropertyGroup>
 
   <ItemGroup>

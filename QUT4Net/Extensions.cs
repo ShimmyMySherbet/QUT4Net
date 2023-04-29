@@ -24,6 +24,25 @@ namespace QUT4Net
             return def;
         }
 
+
+        public static float QueryFloat(this HtmlNode document, string xPath, int def = 0)
+        {
+            var node = document.SelectSingleNode(xPath);
+
+            if (node == null)
+            {
+                return def;
+            }
+
+            var cleaned = node.InnerText.Replace("$", "").Replace(",", "").Trim();
+
+            if (float.TryParse(cleaned, out var value))
+            {
+                return value;
+            }
+            return def;
+        }
+
         public static string[] QueryArray(this HtmlNode document, string xPath, string delimiter = ",", bool direct = false)
         {
             var node = document.SelectSingleNode(xPath);
